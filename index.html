@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WanderNest Tourism</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        /* Background Image */
+        .bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: url("https://images.unsplash.com/photo-1469474968028-56623f02e42e") no-repeat center center/cover;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            background: rgba(0,0,0,0.6);
+        }
+
+        nav {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0,0,0,0.7);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #00ffcc;
+        }
+
+        section {
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        /* Glass Effect Card */
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            margin: 15px;
+            border-radius: 12px;
+            width: 280px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            margin-top: 10px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #00c6ff;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0072ff;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 12px;
+            width: 320px;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<header>
+    <h1>WanderNest Tourism</h1>
+    <p>Explore | Travel | Discover</p>
+</header>
+
+<nav>
+    <a href="#upcoming">Upcoming Trips</a>
+    <a href="#trek">Trek Trips</a>
+    <a href="#booking">Booking</a>
+    <a href="#status">Status</a>
+    <a href="#login">Login</a>
+    <a href="#signup">Sign Up</a>
+</nav>
+
+<!-- Upcoming Trips -->
+<section id="upcoming">
+    <h2>Upcoming Trips</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>Goa Beach</h3>
+            <p>3 Days | ₹8,000</p>
+            <button class="btn">Book Now</button>
+        </div>
+
+        <div class="card">
+            <h3>Manali Tour</h3>
+            <p>5 Days | ₹15,000</p>
+            <button class="btn">Book Now</button>
+        </div>
+    </div>
+</section>
+
+<!-- Trek Trips -->
+<section id="trek">
+    <h2>Trek Trips</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>Rajmachi Trek</h3>
+            <p>Easy | ₹1,500</p>
+            <button class="btn">Book Now</button>
+        </div>
+
+        <div class="card">
+            <h3>Kedarkantha Trek</h3>
+            <p>Difficult | ₹9,000</p>
+            <button class="btn">Book Now</button>
+        </div>
+    </div>
+</section>
+
+<!-- Booking -->
+<section id="booking">
+    <h2>Book Your Trip</h2>
+    <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+
+        <select>
+            <option>Select Trip</option>
+            <option>Goa Beach</option>
+            <option>Manali Tour</option>
+            <option>Rajmachi Trek</option>
+            <option>Kedarkantha Trek</option>
+        </select>
+
+        <select>
+            <option>Payment Method</option>
+            <option>UPI</option>
+            <option>Credit Card</option>
+            <option>Debit Card</option>
+        </select>
+
+        <input type="submit" value="Confirm Booking" class="btn">
+    </form>
+</section>
+
+<!-- Status -->
+<section id="status">
+    <h2>Booking & Payment Status</h2>
+    <div class="card">
+        <p>Booking Status: Pending</p>
+        <p>Payment Status: Not Paid</p>
+    </div>
+</section>
+
+<!-- Login -->
+<section id="login">
+    <h2>Login</h2>
+    <form>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="submit" value="Login" class="btn">
+    </form>
+</section>
+
+<!-- Signup -->
+<section id="signup">
+    <h2>Sign Up</h2>
+    <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <input type="submit" value="Create Account" class="btn">
+    </form>
+</section>
+
+<footer>
+    © 2026 WanderNest Tourism | Web Technology Mini Project
+</footer>
+
+</body>
+</html>
